@@ -52,6 +52,13 @@ body {font-family: "Lato", sans-serif;}
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+.boxing-container{
+      box-sizing: border-box;
+    }
+    .icons-spacing{
+      margin-right: 20px;
+    }
 </style>
 </head>
 <body>
@@ -68,7 +75,78 @@ body {font-family: "Lato", sans-serif;}
 </div>
 
 <div class="main">
-  <button class="btn btn-primary"><a class="nav-item nav-link text-white p-0" href="../userCreation/index.html">Add</a></button>  
+ 
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center text-success mb-2"><b>Users</b></h2>
+        <div class="d-flex flex-row justify-content-end m-4">
+          <button class="btn btn-success"><a class="nav-item nav-link text-white p-0"
+              href="userCreation/index.html">Add</a></button>
+        </div>
+        <table class="table hover-striped">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">SNo</th>
+              <th scope="col">User Name</th>
+              <th scope="col">Phone No</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">001</th>
+              <td>Mark</td>
+              <td>9512346780</td>
+              <td class="d-flex flex-row boxing-container">
+                <a class="nav-item nav-link p-0 icons-spacing" href="#" title="view">
+                  <i style="font-size: 20px;" class="fa fa-arrow-circle-right text-primary" aria-hidden="true"></i>
+                </a>
+                <a class="icons-spacing" href="#" title="edit">
+                  <i style="font-size: 20px;" class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                </a>
+                <a href="#" title="delete">
+                  <i style="font-size: 20px;" class="fa fa-trash text-dark" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">002</th>
+              <td>Jacob</td>
+              <td>8456123792</td>
+              <td class="d-flex flex-row boxing-container">
+                <a class="nav-item nav-link p-0 icons-spacing" href="#" title="view">
+                  <i style="font-size: 20px;" class="fa fa-arrow-circle-right text-primary" aria-hidden="true"></i>
+                </a>
+                <a class="icons-spacing" href="#" title="edit">
+                  <i style="font-size: 20px;" class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                </a>
+                <a href="#" title="delete">
+                  <i style="font-size: 20px;" class="fa fa-trash text-dark" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+            <tr class="">
+              <th scope="row">003</th>
+              <td>Jacob</td>
+              <td>7894651320</td>
+              <td class="d-flex flex-row boxing-container">
+                <a class="nav-item nav-link p-0 icons-spacing" href="#" title="view">
+                  <i style="font-size: 20px;" class="fa fa-arrow-circle-right text-primary" aria-hidden="true"></i>
+                </a>
+                <a class="icons-spacing" href="#" title="edit">
+                  <i style="font-size: 20px;" class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                </a>
+                <a href="#" title="delete">
+                  <i style="font-size: 20px;" class="fa fa-trash text-dark" aria-hidden="true"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 </div>
      
