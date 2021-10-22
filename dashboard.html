@@ -1,68 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<style>
-body {font-family: "Lato", sans-serif;}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
 
-.sidebar {
-  height: 100%;
-  width: 220px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 16px;
-}
+    .sidebar {
+      height: 100%;
+      width: 220px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 16px;
+    }
 
-.sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-}
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #818181;
+      display: block;
+    }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
 
-.main {
-  margin-left: 220px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
-}
+    .main {
+      margin-left: 220px;
+      /* Same as the width of the sidenav */
+      padding: 0px 10px;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-</style>
+    @media screen and (max-height: 450px) {
+      .sidebar {
+        padding-top: 15px;
+      }
+
+      .sidebar a {
+        font-size: 18px;
+      }
+    }
+
+    h4 {
+      color: slateblue;
+      text-align: center;
+      margin-bottom: 8px;
+      font-family: monospace;
+      margin-top: 8px;
+    }
+
+    thead {
+      font-size: 15px;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="sidebar">
-  <a href="index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Finance App</span> </a>
-  <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
-  <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
-  <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
-  <a href="agent.html"><i class="fa fa-fw fa-user-o"></i> Agents</a>
-  <a href="user.html"><i class="fa fa-fw fa-users"></i> Users</a>
-  <a href="collection.html"><i class="fa fa-fw fa-handshake-o"></i> Collections</a>
-  <a href="loans.html"><i class="fa fa-fw fa-credit-card"></i> Loans</a>
-  <a href="investment.html"><i class="fa fa-fw fa-money"></i> Investment</a>
-</div>
+  <div class="sidebar">
+    <a href="index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Finance
+        App</span> </a>
+    <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
+    <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
+    <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
+    <a href="agent.html"><i class="fa fa-fw fa-user-o"></i> Agents</a>
+    <a href="user.html"><i class="fa fa-fw fa-users"></i> Users</a>
+    <a href="collection.html"><i class="fa fa-fw fa-handshake-o"></i> Collections</a>
+    <a href="loans.html"><i class="fa fa-fw fa-credit-card"></i> Loans</a>
+    <a href="investment.html"><i class="fa fa-fw fa-money"></i> Investment</a>
+  </div>
 
-<div class="main">
-  <h2>Dashboard</h2>
-</div>
-     
+  <div class="main">
+    <h4>Dashboard</h4>
+  </div>
+
 </body>
-</html> 
+
+</html>

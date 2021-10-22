@@ -29,7 +29,7 @@
         .sidebar a {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 16px;
             color: #818181;
             display: block;
         }
@@ -53,6 +53,18 @@
                 font-size: 18px;
             }
         }
+
+        h4 {
+            color: slateblue;
+            text-align: center;
+            margin-bottom: 8px;
+            font-family: monospace;
+            margin-top: 8px;
+        }
+
+        thead {
+            font-size: 15px;
+        }
     </style>
 </head>
 
@@ -73,64 +85,57 @@
 
     <div class="main">
 
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="text-center text-success mb-4">Loans</h3>
-
-                    <table class="table hover-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">User ID</th>
-                                <th scope="col">User Name</th>
-                                <th scope="col">Loan Amount</th>
-                                <th scope="col">Last Payment Dt</th>
-                                <th scope="col">Due Dt</th>
-                                <th scope="col">Interest</th>
-                                <th scope="col">Duration</th>
-                                <th scope="col">Loan Opening Dt</th>
-                                <th scope="col">Loan Closing Dt</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="">
-                                <th scope="row">001</th>
-                                <td>Mark</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">002</th>
-                                <td>Jacob</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">003</th>
-                                <td>Jacob</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <h4>Loans</h4>
+        <div class="text-right mt-4">
+            <a type="button" class="btn-sm btn-primary" href="../agentCreation/index.html">Loan</a>
         </div>
+
+        <div class="col-xs-12">
+            <table class="table border table-sm mt-2 table-hover">
+                <thead class="text-center text-white" style="background-color: #2b6885;">
+                    <tr>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Loan Amount</th>
+                        <th>Last Payment Dt</th>
+                        <th>Due Dt</th>
+                        <th>Interest</th>
+                        <th>Duration</th>
+                        <th>Loan Opening Dt</th>
+                        <th>Loan Closing Dt</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <th scope="row">001</th>
+                        <td>Mark</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>
+                            <a data-toggle="tooltip" title="View" href="" class="badge bg-yellow"><i class="fa fa-eye"
+                                    aria-hidden="true"></i></a>
+                            <a data-toggle="tooltip" title="Edit" href="" class="badge bg-light-blue"><i
+                                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a data-toggle="tooltip" title="Delete" href="" class="badge bg-red"><i class="fa fa-trash"
+                                    aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+
     </div>
 </body>
 
