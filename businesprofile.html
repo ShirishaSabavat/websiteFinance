@@ -1,79 +1,201 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Profile</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-crossorigin="anonymous"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style>
-body {font-family: "Lato", sans-serif;}
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
 
-.sidebar {
-  height: 100%;
-  width: 220px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 16px;
-}
+    .sidebar {
+      height: 100%;
+      width: 220px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 16px;
+    }
 
-.sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-}
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #818181;
+      display: block;
+    }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
 
-.main {
-  margin-left: 220px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
-}
+    .main {
+      margin-left: 220px;
+      /* Same as the width of the sidenav */
+      padding: 0px 10px;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-</style>
+    @media screen and (max-height: 450px) {
+      .sidebar {
+        padding-top: 15px;
+      }
+
+      .sidebar a {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="sidebar">
-  <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
-  <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
-  <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
-  <a href="agent.html"><i class="fa fa-fw fa-user-o"></i> Agents</a>
-  <a href="user.html"><i class="fa fa-fw fa-users"></i> Users</a>
-  <a href="collection.html"><i class="fa fa-fw fa-handshake-o"></i> Collections</a>
-  <a href="loans.html"><i class="fa fa-fw fa-credit-card"></i> Loans</a>
-  <a href="investment.html"><i class="fa fa-fw fa-money"></i> Investment</a>
-</div>
+  <div class="sidebar">
+    <a href="index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Finance
+        App</span> </a>
+    <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
+    <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
+    <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
+    <a href="agent.html"><i class="fa fa-fw fa-user-o"></i> Agents</a>
+    <a href="user.html"><i class="fa fa-fw fa-users"></i> Users</a>
+    <a href="collection.html"><i class="fa fa-fw fa-handshake-o"></i> Collections</a>
+    <a href="loans.html"><i class="fa fa-fw fa-credit-card"></i> Loans</a>
+    <a href="investment.html"><i class="fa fa-fw fa-money"></i> Investment</a>
+  </div>
 
-<div class="main">
-  <div class="container mt-5 mb-5">
+  <div class="main">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card mt-3 ml-2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Business Profile</h5>
+            <hr>
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <div>
+                  <label>Logo</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <img src="images/logo1.png" height="40" width="40" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div>
+                  <label>Business name</label>
+                </div>
+                <div>
+                  <label>Address</label>
+                </div>
+                <div>
+                  <label>GST</label>
+                </div>
+                <div>
+                  <label>PAN</label>
+                </div>
+                <div>
+                  <label>Aadhar</label>
+                </div>
+                <div>
+                  <label>Total Investment</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <label>Finance company</label>
+                </div>
+                <div>
+                  <label>Kphb, Hyd</label>
+                </div>
+                <div>
+                  <label>GNVDI215641S1512F525</label>
+                </div>
+                <div>
+                  <label>RBGC2598W74</label>
+                </div>
+                <div>
+                  <label>12548972569</label>
+                </div>
+                <div>
+                  <label>250000</label>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-2">
+              <button id="preview" class="btn-xs btn-warning">Edit Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div id="upd_prof" class="card my-3">
+          <div class="card-body">
+            <form method="">
+              <h4 class="text-center text-info mb-3">Edit Business Profile</h4>
+              <hr>
+              <div class="col-md-6 mb-3 input-group-sm">
+                <label for="companyName" class="form-label text-secondary" name="company_name">Company Name</label>
+                <input type="text" class="form-control" id="companyName" required>
+              </div>
+              <div class="col-md-6 mb-3 input-group-sm">
+                <label for="companyLogo" class="form-label text-secondary" name="company_logo">company Logo</label>
+                <input class="form-control" type="file" id="companyLogo" required>
+              </div>
+              <div class="col-12 col-lg-7 mb-3 input-group-sm">
+                <label for="companyAddress" class="form-label text-secondary" name="company_address">Company
+                  Address</label>
+                <textarea class="form-control" id="companyAddress" required></textarea>
+              </div>
+              <div class="col-md-6 col-lg-5 mb-3 input-group-sm">
+                <label for="gstNumber" class="form-label text-secondary" name="gst_number">GST Number</label>
+                <input type="number" class="form-control" id="gstNumber" required>
+              </div>
+              <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
+                <label for="panNumber" class="form-label text-secondary" name="pan_number">PAN Number</label>
+                <input type="number" class="form-control" id="panNumber" required>
+              </div>
+              <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
+                <label for="aadharNumber" class="form-label text-secondary" name="aadhar_number">Aadhar Number</label>
+                <input type="number" class="form-control" id="aadharNumber" required>
+              </div>
+              <div class="col-12  d-flex flex-row justify-content-center">
+                <button type="submit" class="btn-sm btn-primary w-25">Update Profile</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12 d-flex flex-row justify-content-center">
                 <form class="row">
-                    <h3 class="text-center text-info mb-5">Business Profile</h3>
+                    <h3 class="text-center text-info mb-5">Edit Business Profile</h3>
                     <div class="col-md-6 mb-3 input-group-sm">
                       <label for="companyName" class="form-label text-secondary" name="company_name">Company Name</label>
                       <input type="text" class="form-control" id="companyName" required>
@@ -82,19 +204,19 @@ body {font-family: "Lato", sans-serif;}
                         <label for="companyLogo" class="form-label text-secondary" name="company_logo">company Logo</label>
                         <input class="form-control" type="file" id="companyLogo" required>
                       </div>
-                    <div class="col-12 col-lg-8 mb-3 input-group-sm">
+                    <div class="col-12 col-lg-7 mb-3 input-group-sm">
                       <label for="companyAddress" class="form-label text-secondary" name="company_address">Company Address</label>
                       <textarea class="form-control" id="companyAddress" required></textarea>
                     </div>
-                    <div class="col-md-6 col-lg-4 mb-3 input-group-sm">
+                    <div class="col-md-6 col-lg-5 mb-3 input-group-sm">
                         <label for="gstNumber" class="form-label text-secondary" name="gst_number">GST Number</label>
                         <input type="number" class="form-control" id="gstNumber" required>
                       </div>
-                    <div class="col-md-6 col-lg-4 mb-3 input-group-sm">
+                    <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
                         <label for="panNumber" class="form-label text-secondary" name="pan_number">PAN Number</label>
                         <input type="number" class="form-control" id="panNumber" required>
                       </div>
-                    <div class="col-md-6 col-lg-4 mb-3 input-group-sm">
+                    <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
                         <label for="aadharNumber" class="form-label text-secondary" name="aadhar_number">Aadhar Number</label>
                         <input type="number" class="form-control" id="aadharNumber" required>
                       </div>
@@ -103,14 +225,25 @@ body {font-family: "Lato", sans-serif;}
                         <input type="number" class="form-control" id="capitalInvestment" required>
                       </div>
                       <div class="col-12 d-flex flex-row justify-content-center">
-                        <button type="submit" class="btn btn-primary w-25">Send</button>
+                        <button type="submit" class="btn btn-primary w-25">Update Profile</button>
                       </div>
                     </form>
             </div>
         </div>
-    </div>
+  </div> -->
 
-</div>
-     
+  <script>
+
+  $(document).ready(function() {
+      $('#upd_prof').hide();
+      $('#preview').on('click', function() {
+      $('#upd_prof').toggle(300);
+      });
+  });
+    </script>
+
+  </div>
+
 </body>
-</html> 
+
+</html>

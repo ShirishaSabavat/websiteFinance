@@ -3,20 +3,12 @@
 
 <head>
   <title>Investment</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
     body {
       font-family: "Lato", sans-serif;
@@ -37,7 +29,7 @@
     .sidebar a {
       padding: 6px 8px 6px 16px;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 16px;
       color: #818181;
       display: block;
     }
@@ -61,12 +53,38 @@
         font-size: 18px;
       }
     }
+
+    h4 {
+      color: slateblue;
+      text-align: center;
+      margin-bottom: 8px;
+      font-family: monospace;
+      margin-top: 8px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    h4{
+            color:slateblue;
+            text-align: center;
+            margin-bottom: 8px;
+            font-family:monospace;
+            margin-top: 8px;
+        }
+        thead{
+          font-size: 15px;
+        }
   </style>
 </head>
 
 <body>
 
   <div class="sidebar">
+    <a href="index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Finance
+        App</span> </a>
     <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
     <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
     <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
@@ -78,48 +96,77 @@
   </div>
 
   <div class="main">
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="text-center text-success mb-4"><b>Investment List</b></h2>
-          <table class="table hover-striped">
-            <thead class="table-success">
-              <tr>
-                <th scope="col">SNo</th>
-                <th scope="col">Name</th>
-                <th scope="col">Investment</th>
-                <th scope="col">Total Investment</th>
-                <th scope="col">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">001</th>
-                <td>Mark</td>
-                <td>1,00,000</td>
-                <td>3,00,000</td>
-                <td>5/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">002</th>
-                <td>Jacob</td>
-                <td>1,50,000</td>
-                <td>2,00,000</td>
-                <td>15/9/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">003</th>
-                <td>Jacob</td>
-                <td>10,000</td>
-                <td>1,20,000</td>
-                <td>3/12/2020</td>
-              </tr>
-            </tbody>
-          </table>
+
+    <h4>Investments</h4>
+    <div class="text-right mt-4">
+      <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#investmentmodal">Add
+        Capital</button>
+    </div>
+
+    <div class="col-xs-12">
+      <table class="table border table-sm mt-2 table-hover">
+        <thead class="text-center text-white" style="background-color: #2b6885;">
+          <tr>
+            <th>SNo</th>
+            <th>Name</th>
+            <th>Investment</th>
+            <th>Total Investment</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>1</td>
+            <td>Jhon</td>
+            <td>150000</td>
+            <td>250000</td>
+            <td>30-04-2020</td>
+            <td>
+              <a data-toggle="tooltip" title="View" href="" class="badge bg-yellow"><i class="fa fa-eye"
+                  aria-hidden="true"></i></a>
+              <a data-toggle="tooltip" title="Edit" href="" class="badge bg-light-blue"><i class="fa fa-pencil-square-o"
+                  aria-hidden="true"></i></a>
+              <a data-toggle="tooltip" title="Delete" href="" class="badge bg-red"><i class="fa fa-trash"
+                  aria-hidden="true"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Modal investment -->
+    <div class="modal fade" id="investmentmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h6 class="text-center" style="color: rgb(40, 74, 165);">Add Capital</h6>
+            <hr>
+            <form action="" method="post">
+              <div class="form-group input-group-sm">
+                <input type="number" class="form-control" placeholder="Enter Amount" required>
+              </div>
+              <div class="text-right mt-2">
+                <button type="button" class="btn-xs btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn-xs btn-primary">Go..</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- Modal investment close -->
 
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
+  </div>
 </body>
 </html>
