@@ -64,6 +64,9 @@
         font-size: 18px;
       }
     }
+    label{
+      font-size: small;
+    }
   </style>
 </head>
 
@@ -155,32 +158,32 @@
             <form method="">
               <h4 class="text-center text-info mb-3">Edit Business Profile</h4>
               <hr>
-              <div class="col-md-6 mb-3 input-group-sm">
-                <label for="companyName" class="form-label text-secondary" name="company_name">Company Name</label>
+              <div class="col-md-10 mb-3 input-group-sm">
+                <label for="companyName" name="company_name">Company Name</label>
                 <input type="text" class="form-control" id="companyName" required>
               </div>
-              <div class="col-md-6 mb-3 input-group-sm">
-                <label for="companyLogo" class="form-label text-secondary" name="company_logo">company Logo</label>
+              <div class="col-md-10 mb-3 input-group-sm">
+                <label for="companyLogo" name="company_logo">company Logo</label>
                 <input class="form-control" type="file" id="companyLogo" required>
               </div>
-              <div class="col-12 col-lg-7 mb-3 input-group-sm">
-                <label for="companyAddress" class="form-label text-secondary" name="company_address">Company
+              <div class="col-12 mb-3 input-group-sm">
+                <label for="companyAddress" name="company_address">Company
                   Address</label>
                 <textarea class="form-control" id="companyAddress" required></textarea>
               </div>
-              <div class="col-md-6 col-lg-5 mb-3 input-group-sm">
-                <label for="gstNumber" class="form-label text-secondary" name="gst_number">GST Number</label>
+              <div class="col-md-10 mb-3 input-group-sm">
+                <label for="gstNumber" name="gst_number">GST Number</label>
                 <input type="number" class="form-control" id="gstNumber" required>
               </div>
-              <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
-                <label for="panNumber" class="form-label text-secondary" name="pan_number">PAN Number</label>
+              <div class="col-md-10 mb-3 input-group-sm">
+                <label for="panNumber" name="pan_number">PAN Number</label>
                 <input type="number" class="form-control" id="panNumber" required>
               </div>
-              <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
-                <label for="aadharNumber" class="form-label text-secondary" name="aadhar_number">Aadhar Number</label>
+              <div class="col-md-10 mb-3 input-group-sm">
+                <label for="aadharNumber" name="aadhar_number">Aadhar Number</label>
                 <input type="number" class="form-control" id="aadharNumber" required>
               </div>
-              <div class="col-12  d-flex flex-row justify-content-center">
+              <div class="col-12 d-flex flex-row justify-content-center">
                 <button type="submit" class="btn-sm btn-primary w-25">Update Profile</button>
               </div>
             </form>

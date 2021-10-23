@@ -68,11 +68,40 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="dashboard.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href=""  data-toggle="modal" data-target="#investmentmodal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    
+    <!-- Modal investment -->
+    <div class="modal fade" id="investmentmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h6 class="text-center" style="color: rgb(40, 74, 165);"><b>Login</b></h6>
+            <hr>
+            <form action="" method="post">
+              <div class="form-group input-group-sm">
+                <input type="email" class="form-control" placeholder="Email ID" required><br/>
+                <input type="password" class="form-control" placeholder="Password" required>
+              </div>
+              <div class="text-right mt-2">
+                <button type="button" class="btn-xs btn-secondary" data-dismiss="modal">Close</button>
+               <button type="submit" class="btn-xs btn-primary"><a style="color: #f2f2f2;" type="button" href="dashboard.html">Submit</a></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal investment close -->
+
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -142,7 +171,7 @@
             <p style="font-size: 18px; color: #bbb5b5;"><b>Finance Company</b></p>
         </div>
         <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(15, 15, 15, 0.2)">
+        <div class="navbar nav text-center p-4" style="background-color: rgba(15, 15, 15, 0.2)">
             <span style="color: blanchedalmond;">© 2020 Copyright:</span>
             <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>

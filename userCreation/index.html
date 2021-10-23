@@ -47,11 +47,22 @@ body {font-family: "Lato", sans-serif;}
   margin-left: 220px; /* Same as the width of the sidenav */
   padding: 0px 10px;
 }
+label {
+  font-size: small;
+}
 
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+h4 {
+      color: slateblue;
+      text-align: center;
+      margin-bottom: 12px;
+      font-family: monospace;
+      margin-top: 8px;
+    }
 </style>
 </head>
 <body>
@@ -70,44 +81,42 @@ body {font-family: "Lato", sans-serif;}
   
 <div class="main">
   
-  <div class="container mt-5 mb-5">
+  <div class="container mt-2 mb-5">
     <div class="row">
-      <div class="col-12  d-flex flex-row justify-content-center">
-        <form class="row">
-          <h3 class="text-center text-primary mb-5">Create Account For User</h3>
+      <div class="col-12 card w-75 d-flex flex-row">
+        <form class="row card-body p-4">
+          <h4>Create Account For User</h4>
           <div class="col-md-6 mb-3 input-group-sm">
-            <label for="companyName" class="form-label text-secondary" name="full_name">Full Name</label>
+            <label for="companyName" name="full_name">Full Name</label>
             <input type="text" class="form-control" id="companyName" required>
           </div>
           <div class="col-md-6 mb-3 input-group-sm">
-            <label for="exampleInputPassword1" class="form-label text-secondary" name="password">Password</label>
+            <label for="exampleInputPassword1" name="password">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" required>
           </div>
           <div class="col-md-6 mb-3 input-group-sm">
-            <label for="exampleInputEmail1" class="form-label text-secondary" name="email_id">Email Id</label>
+            <label for="exampleInputEmail1" name="email_id">Email Id</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
           </div>
           <div class="col-md-6 mb-3 input-group-sm">
-            <label for="phnNumber" class="form-label text-secondary" name="phone_number">Phone Number</label>
+            <label for="phnNumber" name="phone_number">Phone Number</label>
             <input type="number" class="form-control" id="phnNumber" required>
           </div>
           <div class="col-md-6 mb-3 input-group-sm">
-            <label for="address" class="form-label text-secondary" name="address">Address</label>
+            <label for="address" name="address">Address</label>
             <textarea class="form-control" id="address" required></textarea>
           </div>
           <div class="col-md-6 mb-3 input-group-sm">
-            <label for="referrence" class="form-label text-secondary" name="referrence">Referrence</label>
+            <label for="referrence" name="referrence">Referrence</label>
             <input type="text" class="form-control" id="referrence" required>
           </div>
           <div class="d-flex flex-row justify-content-center">
-            <button type="submit" class="btn btn-primary w-25">Create</button>
+            <button type="submit" class="btn-sm btn-primary w-25">Create</button>
           </div>
         </form>
+        <div>
       </div>
-      <div class="col-12">
-        <button class="btn btn-secondary"><a class="nav-item nav-link p-0 text-white" href="../user.html">Back</a></button>
       </div>
-    </div>
   </div>
 
 </div>
