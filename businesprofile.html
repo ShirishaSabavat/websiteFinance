@@ -19,10 +19,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="javascript/bussinessProfile.js"></script>
 
   <style>
     body {
       font-family: "Lato", sans-serif;
+      overflow: hidden;
     }
 
     .sidebar {
@@ -41,12 +43,12 @@
       padding: 6px 8px 6px 16px;
       text-decoration: none;
       font-size: 16px;
-      color: #818181;
+      color: white;
       display: block;
     }
 
     .sidebar a:hover {
-      color: #f1f1f1;
+      color: tomato;
     }
 
     .main {
@@ -67,14 +69,18 @@
     label{
       font-size: small;
     }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="sidebar">
-    <a href="index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Finance
-        App</span> </a>
+  <div class="sidebar bg-dark">
+    <a href="index.html" class="bg-light p-2" style="margin-top:-15px; font-size: 20px;"> <img src="images/logo1.png" width="42px" height='42px' ></img> <span class="text-dark font-weight-bold">Finance App</span></a>
     <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
     <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
     <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
@@ -86,6 +92,9 @@
   </div>
 
   <div class="main">
+    <div class="bg-dark" style="margin-left: -10px; margin-right: -10px; padding: 12px;">
+      <h4 class="text-white font-weight-bold text-left">Bussiness Profile</h4>
+    </div>
     <div class="row">
       <div class="col-md-5">
         <div class="card mt-3 ml-2">
@@ -127,22 +136,22 @@
               </div>
               <div class="col-sm-6">
                 <div>
-                  <label>Finance company</label>
+                  <label id="bussinessName"></label>
                 </div>
                 <div>
-                  <label>Kphb, Hyd</label>
+                  <label id="address"></label>
                 </div>
                 <div>
-                  <label>GNVDI215641S1512F525</label>
+                  <label id="gstno"></label>
                 </div>
                 <div>
-                  <label>RBGC2598W74</label>
+                  <label id="panno"></label>
                 </div>
                 <div>
-                  <label>12548972569</label>
+                  <label id="aadharno"></label>
                 </div>
                 <div>
-                  <label>250000</label>
+                  <label id="capital"></label>
                 </div>
               </div>
             </div>
@@ -155,7 +164,7 @@
       <div class="col-md-7">
         <div id="upd_prof" class="card my-3">
           <div class="card-body">
-            <form method="">
+            <form method="post" id="editForm">
               <h4 class="text-center text-info mb-3">Edit Business Profile</h4>
               <hr>
               <div class="col-md-10 mb-3 input-group-sm">
@@ -235,14 +244,14 @@
         </div>
   </div> -->
 
-  <script>
+    <script>
 
-  $(document).ready(function() {
-      $('#upd_prof').hide();
-      $('#preview').on('click', function() {
-      $('#upd_prof').toggle(300);
+      $(document).ready(function () {
+        $('#upd_prof').hide();
+        $('#preview').on('click', function () {
+          $('#upd_prof').toggle(300);
+        });
       });
-  });
     </script>
 
   </div>

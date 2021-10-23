@@ -26,7 +26,6 @@ body {font-family: "Lato", sans-serif;}
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
   overflow-x: hidden;
   padding-top: 16px;
 }
@@ -35,12 +34,12 @@ body {font-family: "Lato", sans-serif;}
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 16px;
-  color: #818181;
+  color: #f1f1f1;
   display: block;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: tomato
 }
 
 .main {
@@ -63,12 +62,14 @@ h4 {
       font-family: monospace;
       margin-top: 8px;
     }
+.container{
+  width: 70%;
+}
 </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="index.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Finance
-      App</span> </a>
+  <div class="sidebar bg-dark">
+    <a href="index.html" class="bg-light p-2" style="margin-top:-15px; font-size: 20px;"> <img src="../images/logo1.png" width="42px" height='42px' ></img> <span class="text-dark font-weight-bold">Finance App</span></a>
     <a href="../dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
     <a href="../businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
     <a href="../loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
@@ -81,11 +82,14 @@ h4 {
   
 <div class="main">
   
-  <div class="container mt-2 mb-5">
+  <div class="bg-dark" style="margin-left: -10px; margin-right: -10px; margin-bottom: 10px; padding: 12px;">
+    <h4 class="text-white font-weight-bold text-left">Create Account For User</h4>
+  </div>
+  <div class="container mb-5">
+  <div class="container shadow p-4 my-5">
     <div class="row">
-      <div class="col-12 card w-75 d-flex flex-row">
-        <form class="row card-body p-4">
-          <h4>Create Account For User</h4>
+      <div class="col-12  d-flex flex-row justify-content-center">
+        <form class="row mt-3">
           <div class="col-md-6 mb-3 input-group-sm">
             <label for="companyName" name="full_name">Full Name</label>
             <input type="text" class="form-control" id="companyName" required>
@@ -111,12 +115,16 @@ h4 {
             <input type="text" class="form-control" id="referrence" required>
           </div>
           <div class="d-flex flex-row justify-content-center">
-            <button type="submit" class="btn-sm btn-primary w-25">Create</button>
+            <div>
+              <a type="button" class="btn btn-secondary" href="../user.html">Back</a>
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
           </div>
         </form>
         <div>
       </div>
-      </div>
+      
+    </div>
   </div>
 
 </div>
