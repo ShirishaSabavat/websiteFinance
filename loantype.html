@@ -65,6 +65,14 @@
     thead {
       font-size: 15px;
     }
+    .container{
+      width: 60%;
+    }
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
   </style>
 </head>
 
@@ -85,8 +93,83 @@
 
   <div class="main">
     <h4>Loan Type</h4>
-  </div>
 
+    <div class="container shadow rounded px-4 pt-4 pb-3 mt-4">
+      <form action="" method="post">
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Loan Amount</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Loan amount" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Intrest Rate</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control form-control-sm" placeholder="rate of intrest" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Duration Type</label>
+          <div class="col-sm-9">
+            <select class="custom-select custom-select-sm" required>
+              <option selected> - select duration type - </option>
+              <option value="1">Annual</option>
+              <option value="2">Month</option>
+              <option value="3">Day</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Duration</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control form-control-sm" placeholder="Enter duration" required>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn-sm btn-success">calculate</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="container shadow rounded px-4 pt-4 pb-3 mt-4">
+      <form action="" method="post">
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Loan Amount</label>
+          <div class="col-sm-9">
+            <input type="text" name="" class="form-control form-control-sm" disabled>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Intrest Rate</label>
+          <div class="col-sm-9">
+            <input type="text" name="" class="form-control form-control-sm" disabled>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Duration Type</label>
+          <div class="col-sm-9">
+            <input type="number" name="" class="form-control form-control-sm"  disabled>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Duration</label>
+          <div class="col-sm-9">
+            <input type="number" name="" class="form-control form-control-sm"  disabled>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label col-form-label-sm">Total Amount</label>
+          <div class="col-sm-9">
+            <input type="number" name="" class="form-control form-control-sm"  disabled>
+          </div>
+        </div>
+        <div class="text-right">
+          <button type="submit" class="btn-sm btn-success">Apply loan</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
 </body>
 
 </html>
