@@ -24,7 +24,7 @@
       overflow-x: hidden;
       padding-top: 16px;
     }
-    
+
     .sidebar a {
       padding: 6px 8px 6px 16px;
       text-decoration: none;
@@ -32,7 +32,7 @@
       display: block;
       color: white;
     }
-    
+
     .sidebar a:hover {
       color: tomato;
     }
@@ -64,21 +64,25 @@
     thead {
       font-size: 15px;
     }
-    .container{
+
+    .container {
       width: 60%;
     }
+
     input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="sidebar bg-dark">
-    <a href="index.html" class="bg-light p-2" style="margin-top:-15px; font-size: 20px;"> <img src="images/logo1.png" width="42px" height='42px' class="rounded" ></img> <span class="text-dark font-weight-bold">Finance App</span></a>
+    <a href="index.html" class="bg-light p-2" style="margin-top:-15px; font-size: 20px;"> <img src="images/logo1.png"
+        width="42px" height='42px' class="rounded"></img> <span class="text-dark font-weight-bold">Finance
+        App</span></a>
     <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
     <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
     <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
@@ -131,8 +135,8 @@ input::-webkit-inner-spin-button {
       </form>
     </div>
 
-    <div class="container shadow rounded px-4 pt-4 pb-3 my-4">
-      <form action="" method="post">
+    <div class="container shadow rounded px-4 pt-4 pb-3 my-4" id="loandetails">
+      <form action="" id="myForm" method="post">
         <div class="form-group row">
           <label class="col-sm-3 col-form-label col-form-label-sm">Loan Amount</label>
           <div class="col-sm-9">
@@ -148,19 +152,19 @@ input::-webkit-inner-spin-button {
         <div class="form-group row">
           <label class="col-sm-3 col-form-label col-form-label-sm">Duration Type</label>
           <div class="col-sm-9">
-            <input type="number" name="" class="form-control form-control-sm"  disabled>
+            <input type="number" name="" class="form-control form-control-sm" disabled>
           </div>
         </div>
         <div class="form-group row">
           <label class="col-sm-3 col-form-label col-form-label-sm">Duration</label>
           <div class="col-sm-9">
-            <input type="number" name="" class="form-control form-control-sm"  disabled>
+            <input type="number" name="" class="form-control form-control-sm" disabled>
           </div>
         </div>
         <div class="form-group row">
           <label class="col-sm-3 col-form-label col-form-label-sm">Total Amount</label>
           <div class="col-sm-9">
-            <input type="number" name="" class="form-control form-control-sm"  disabled>
+            <input type="number" name="" class="form-control form-control-sm" disabled>
           </div>
         </div>
         <div class="text-center">
@@ -168,6 +172,15 @@ input::-webkit-inner-spin-button {
         </div>
       </form>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $('#loandetails').hide();
+      });
+      $("#myform").submit(function () {
+        $("#loandetails").show();
+      });
+    </script>
 
   </div>
 </body>

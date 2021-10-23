@@ -24,7 +24,6 @@
   <style>
     body {
       font-family: "Lato", sans-serif;
-      overflow: hidden;
     }
 
     .sidebar {
@@ -69,6 +68,16 @@
     label{
       font-size: small;
     }
+
+    .card-body label {
+            font-weight: 600;
+        }
+
+        .card-body p {
+            font-weight: 600;
+            color: #0062cc;
+        }
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -80,7 +89,8 @@
 <body>
 
   <div class="sidebar bg-dark">
-    <a href="index.html" class="bg-light p-2" style="margin-top:-15px; font-size: 20px;"> <img src="images/logo1.png" width="42px" height='42px' ></img> <span class="text-dark font-weight-bold">Finance App</span></a>
+    <a href="index.html" class="bg-light p-2" style="margin-top:-15px; font-size: 20px;"> <img src="images/logo1.png"
+        width="42px" height='42px'></img> <span class="text-dark font-weight-bold">Finance App</span></a>
     <a href="dashboard.html"><i class="fa fa-fw fa-tasks"></i> Dashboard</a>
     <a href="businesprofile.html"><i class="fa fa-fw fa-bank"></i> Busines Profile</a>
     <a href="loantype.html"><i class="fa fa-fw fa-book"></i> Loan Type</a>
@@ -101,58 +111,60 @@
           <div class="card-body">
             <h5 class="card-title text-center">Business Profile</h5>
             <hr>
-            <div class="row mb-2">
-              <div class="col-sm-6">
-                <div>
-                  <label>Logo</label>
-                </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Logo</label>
               </div>
-              <div class="col-sm-6">
-                <div>
-                  <img src="images/logo1.png" height="40" width="40" alt="">
-                </div>
+              <div class="col-md-6">
+                <img src="images/logo1.png" height="40" width="40" alt="">
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-6">
-                <div>
-                  <label>Business name</label>
-                </div>
-                <div>
-                  <label>Address</label>
-                </div>
-                <div>
-                  <label>GST</label>
-                </div>
-                <div>
-                  <label>PAN</label>
-                </div>
-                <div>
-                  <label>Aadhar</label>
-                </div>
-                <div>
-                  <label>Total Investment</label>
-                </div>
+              <div class="col-md-6">
+                <label>Business name</label>
               </div>
-              <div class="col-sm-6">
-                <div>
-                  <label id="bussinessName"></label>
-                </div>
-                <div>
-                  <label id="address"></label>
-                </div>
-                <div>
-                  <label id="gstno"></label>
-                </div>
-                <div>
-                  <label id="panno"></label>
-                </div>
-                <div>
-                  <label id="aadharno"></label>
-                </div>
-                <div>
-                  <label id="capital"></label>
-                </div>
+              <div class="col-md-6">
+                <p id="bussinessName"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Address</label>
+              </div>
+              <div class="col-md-6">
+                <p id="address"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>GST</label>
+              </div>
+              <div class="col-md-6">
+                <p id="gstno"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>PAN</label>
+              </div>
+              <div class="col-md-6">
+                <p id="panno"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Aadhar</label>
+              </div>
+              <div class="col-md-6">
+                <p id="aadharno"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Total Investment</label>
+              </div>
+              <div class="col-md-6">
+                <p id="capital"></p>
               </div>
             </div>
             <div class="text-center mt-2">
@@ -161,98 +173,55 @@
           </div>
         </div>
       </div>
-      <div class="col-md-7">
-        <div id="upd_prof" class="card my-3">
-          <div class="card-body">
-            <form method="post" id="editForm">
-              <h4 class="text-center text-info mb-3">Edit Business Profile</h4>
-              <hr>
-              <div class="col-md-10 mb-3 input-group-sm">
-                <label for="companyName" name="company_name">Company Name</label>
-                <input type="text" class="form-control" id="companyName" required>
-              </div>
-              <div class="col-md-10 mb-3 input-group-sm">
-                <label for="companyLogo" name="company_logo">company Logo</label>
-                <input class="form-control" type="file" id="companyLogo" required>
-              </div>
-              <div class="col-12 mb-3 input-group-sm">
-                <label for="companyAddress" name="company_address">Company
-                  Address</label>
-                <textarea class="form-control" id="companyAddress" required></textarea>
-              </div>
-              <div class="col-md-10 mb-3 input-group-sm">
-                <label for="gstNumber" name="gst_number">GST Number</label>
-                <input type="number" class="form-control" id="gstNumber" required>
-              </div>
-              <div class="col-md-10 mb-3 input-group-sm">
-                <label for="panNumber" name="pan_number">PAN Number</label>
-                <input type="number" class="form-control" id="panNumber" required>
-              </div>
-              <div class="col-md-10 mb-3 input-group-sm">
-                <label for="aadharNumber" name="aadhar_number">Aadhar Number</label>
-                <input type="number" class="form-control" id="aadharNumber" required>
-              </div>
-              <div class="col-12 d-flex flex-row justify-content-center">
-                <button type="submit" class="btn-sm btn-primary w-25">Update Profile</button>
-              </div>
-            </form>
-          </div>
+    <div class="col-md-7">
+      <div id="upd_prof" class="card my-3">
+        <div class="card-body">
+          <form method="post" id="editForm">
+            <h4 class="text-center text-info mb-3">Edit Business Profile</h4>
+            <hr>
+            <div class="col-md-6 mb-3 input-group-sm">
+              <label for="companyName" class="form-label text-secondary" name="company_name">Company Name</label>
+              <input type="text" class="form-control" id="companyName" required>
+            </div>
+            <div class="col-md-6 mb-3 input-group-sm">
+              <label for="companyLogo" class="form-label text-secondary" name="company_logo">company Logo</label>
+              <input class="form-control" type="file" id="companyLogo" required>
+            </div>
+            <div class="col-12 col-lg-7 mb-3 input-group-sm">
+              <label for="companyAddress" class="form-label text-secondary" name="company_address">Company
+                Address</label>
+              <textarea class="form-control" id="companyAddress" required></textarea>
+            </div>
+            <div class="col-md-6 col-lg-5 mb-3 input-group-sm">
+              <label for="gstNumber" class="form-label text-secondary" name="gst_number">GST Number</label>
+              <input type="number" class="form-control" id="gstNumber" required>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
+              <label for="panNumber" class="form-label text-secondary" name="pan_number">PAN Number</label>
+              <input type="number" class="form-control" id="panNumber" required>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
+              <label for="aadharNumber" class="form-label text-secondary" name="aadhar_number">Aadhar Number</label>
+              <input type="number" class="form-control" id="aadharNumber" required>
+            </div>
+            <div class="col-12  d-flex flex-row justify-content-center">
+              <button type="submit" class="btn-sm btn-primary w-25">Update Profile</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
+  <script>
 
-
-    <!-- <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-12 d-flex flex-row justify-content-center">
-                <form class="row">
-                    <h3 class="text-center text-info mb-5">Edit Business Profile</h3>
-                    <div class="col-md-6 mb-3 input-group-sm">
-                      <label for="companyName" class="form-label text-secondary" name="company_name">Company Name</label>
-                      <input type="text" class="form-control" id="companyName" required>
-                    </div>
-                    <div class="col-md-6 mb-3 input-group-sm">
-                        <label for="companyLogo" class="form-label text-secondary" name="company_logo">company Logo</label>
-                        <input class="form-control" type="file" id="companyLogo" required>
-                      </div>
-                    <div class="col-12 col-lg-7 mb-3 input-group-sm">
-                      <label for="companyAddress" class="form-label text-secondary" name="company_address">Company Address</label>
-                      <textarea class="form-control" id="companyAddress" required></textarea>
-                    </div>
-                    <div class="col-md-6 col-lg-5 mb-3 input-group-sm">
-                        <label for="gstNumber" class="form-label text-secondary" name="gst_number">GST Number</label>
-                        <input type="number" class="form-control" id="gstNumber" required>
-                      </div>
-                    <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
-                        <label for="panNumber" class="form-label text-secondary" name="pan_number">PAN Number</label>
-                        <input type="number" class="form-control" id="panNumber" required>
-                      </div>
-                    <div class="col-md-6 col-lg-6 mb-3 input-group-sm">
-                        <label for="aadharNumber" class="form-label text-secondary" name="aadhar_number">Aadhar Number</label>
-                        <input type="number" class="form-control" id="aadharNumber" required>
-                      </div>
-                      <div class="col-md-6 col-lg-4 mb-3 input-group-sm">
-                        <label for="capitalInvestment" class="form-label text-secondary" name="capital_investment">Capital Investment</label>
-                        <input type="number" class="form-control" id="capitalInvestment" required>
-                      </div>
-                      <div class="col-12 d-flex flex-row justify-content-center">
-                        <button type="submit" class="btn btn-primary w-25">Update Profile</button>
-                      </div>
-                    </form>
-            </div>
-        </div>
-  </div> -->
-
-    <script>
-
-      $(document).ready(function () {
-        $('#upd_prof').hide();
-        $('#preview').on('click', function () {
-          $('#upd_prof').toggle(300);
-        });
+    $(document).ready(function () {
+      $('#upd_prof').hide();
+      $('#preview').on('click', function () {
+        $('#upd_prof').toggle(300);
       });
-    </script>
+    });
+  </script>
 
   </div>
 
