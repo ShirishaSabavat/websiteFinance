@@ -19,10 +19,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="javascript/bussinessProfile.js"></script>
 
   <style>
     body {
       font-family: "Lato", sans-serif;
+      overflow: hidden;
     }
 
     .sidebar {
@@ -132,22 +134,22 @@
               </div>
               <div class="col-sm-6">
                 <div>
-                  <label>Finance company</label>
+                  <label id="bussinessName"></label>
                 </div>
                 <div>
-                  <label>Kphb, Hyd</label>
+                  <label id="address"></label>
                 </div>
                 <div>
-                  <label>GNVDI215641S1512F525</label>
+                  <label id="gstno"></label>
                 </div>
                 <div>
-                  <label>RBGC2598W74</label>
+                  <label id="panno"></label>
                 </div>
                 <div>
-                  <label>12548972569</label>
+                  <label id="aadharno"></label>
                 </div>
                 <div>
-                  <label>250000</label>
+                  <label id="capital"></label>
                 </div>
               </div>
             </div>
@@ -160,7 +162,7 @@
       <div class="col-md-7">
         <div id="upd_prof" class="card my-3">
           <div class="card-body">
-            <form method="">
+            <form method="post" id="editForm">
               <h4 class="text-center text-info mb-3">Edit Business Profile</h4>
               <hr>
               <div class="col-md-6 mb-3 input-group-sm">
