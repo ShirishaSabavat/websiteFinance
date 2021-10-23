@@ -35,12 +35,12 @@ body {font-family: "Lato", sans-serif;}
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 16px;
-  color: #818181;
+  color: #f1f1f1;
   display: block;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: tomato
 }
 
 .main {
@@ -51,6 +51,9 @@ body {font-family: "Lato", sans-serif;}
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+.container{
+  width: 70%;
 }
 </style>
 </head>
@@ -100,13 +103,14 @@ body {font-family: "Lato", sans-serif;}
             <input type="text" class="form-control" id="referrence" required>
           </div>
           <div class="d-flex flex-row justify-content-center">
-            <button type="submit" class="btn btn-primary w-25">Create</button>
+            <div>
+              <a type="button" class="btn btn-secondary" href="../user.html">Back</a>
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
           </div>
         </form>
       </div>
-      <div class="col-12">
-        <button class="btn btn-secondary"><a class="nav-item nav-link p-0 text-white" href="../user.html">Back</a></button>
-      </div>
+      
     </div>
   </div>
 
