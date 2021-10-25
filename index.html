@@ -42,20 +42,21 @@
         p#carou {
             color: rgb(139, 56, 150);
         }
-        .footer-link-spacing{
+
+        .footer-link-spacing {
             margin-right: 15px;
         }
 
-        h3{
+        h3 {
             color: teal;
             font-weight: 700;
             background-color: rgb(216, 216, 216);
             padding-top: 12px;
             padding-bottom: 12px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        .well p{
+        .well p {
             color: slateblue;
             text-indent: 20px;
             text-align: justify;
@@ -84,37 +85,38 @@
                     <li class="nav-item"><a class="nav-link" href="contact/contactus.html">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#investmentmodal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a data-toggle="modal" data-target="#investmentmodal"><span
+                                class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+
     <!-- Modal login -->
     <div class="modal fade" id="investmentmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <!-- <h5 class="text-center" style="color: rgb(40, 74, 165);"><b>Login</b></h5> -->
-            <hr>
-            <form action="dashboard.html" method="post">
-              <div class="form-group input-group-sm">
-                <input type="email" class="form-control" placeholder="Email ID" required><br/>
-                <input type="password" class="form-control" placeholder="Password" required>
-              </div>
-              <div class="text-center mt-2">
-                <button type="button" class="btn-xs btn-secondary" data-dismiss="modal">back</button>
-                <button type="submit" class="btn-xs btn-primary">Login</button>
-              </div>
-            </form>
-          </div>
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- <h5 class="text-center" style="color: rgb(40, 74, 165);"><b>Login</b></h5> -->
+                    <hr>
+                    <form id="login" method="post">
+                        <div class="form-group input-group-sm">
+                            <input type="email" id="email" class="form-control" placeholder="Email ID" required><br />
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="text-center mt-2">
+                            <button type="button" class="btn-xs btn-secondary" data-dismiss="modal">back</button>
+                            <button type="submit" class="btn-xs btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <!-- Modal login close -->
 
@@ -159,26 +161,27 @@
     <div class="container text-center">
         <h3>Keep up to date with the latest Loan plans</h3><br>
         <div class="row">
-                <div class="col-sm-4">
-                    <img src="images/rupee.jpg" class="img-responsive" style="width:100%; height: 220px;" alt="Image">
-                    <p>Current offer</p>
+            <div class="col-sm-4">
+                <img src="images/rupee.jpg" class="img-responsive" style="width:100%; height: 220px;" alt="Image">
+                <p>Current offer</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/currency.jpg" class="img-responsive" style="width:100%; height: 220px;" alt="Image">
+                <p>sample image</p>
+                <div class="text-center" style="margin-top: 25px;">
+                    <a type="button" class="btn btn-warning" href="contact/contactus.html">Request a call back</a>
                 </div>
-                <div class="col-sm-4">
-                    <img src="images/currency.jpg" class="img-responsive" style="width:100%; height: 220px;" alt="Image">
-                    <p>sample image</p>
-                    <div class="text-center" style="margin-top: 25px;">
-                        <a type="button" class="btn btn-warning" href="contact/contactus.html">Request a call back</a>
-                    </div>
-                </div>
+            </div>
             <div class="col-sm-4">
                 <div class="well">
-                    <p>If you are among the 1.38 billion Indian who are self-employed, you’ll be glad to know that 
-                        we understand how your financial profile can be different from borrowers who earn a regular 
+                    <p>If you are among the 1.38 billion Indian who are self-employed, you’ll be glad to know that
+                        we understand how your financial profile can be different from borrowers who earn a regular
                         salary.
                     </p>
                 </div>
                 <div class="well">
-                    <p>A complete suite of cash flow based financial solutions to all customers, dealers and private financiers. 
+                    <p>A complete suite of cash flow based financial solutions to all customers, dealers and private
+                        financiers.
                         Our Business Loan comes with easy and simple processing, unmatched offerings / benefits.
                     </p>
                 </div>
@@ -188,7 +191,8 @@
 
     <footer class="container-fluid navbar-inverse">
         <div class="bg-dark">
-            <a class="nav-item nav-link active footer-link-spacing" href="#"><span style="color: #bbb5b5;">About Us</span></a>
+            <a class="nav-item nav-link active footer-link-spacing" href="#"><span style="color: #bbb5b5;">About
+                    Us</span></a>
             <a class="nav-item nav-link text-white" href="#"><span style="color: #bbb5b5;">Privacy policy</span></a>
         </div>
         <div class="text-center">
@@ -200,7 +204,9 @@
         </div>
         <!-- Copyright -->
     </footer>
-
+    <script src="./javascript/auth.js">
+       
+    </script>
 </body>
 
 </html>
