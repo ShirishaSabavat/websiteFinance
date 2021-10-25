@@ -99,7 +99,7 @@
     </div>
 
     <div class="container shadow rounded px-4 pt-4 pb-3 mt-4">
-      <form action="" method="post">
+      <form action="" id="myForm" method="post">
         <div class="form-group row">
           <label class="col-sm-3 col-form-label col-form-label-sm">Loan Amount</label>
           <div class="col-sm-9">
@@ -136,7 +136,7 @@
     </div>
 
     <div class="container shadow rounded px-4 pt-4 pb-3 my-4" id="loandetails">
-      <form action="" id="myForm" method="post">
+      <form action="" method="post">
         <div class="form-group row">
           <label class="col-sm-3 col-form-label col-form-label-sm">Loan Amount</label>
           <div class="col-sm-9">
@@ -177,9 +177,11 @@
       $(document).ready(function () {
         $('#loandetails').hide();
       });
-      $("#myform").submit(function () {
-        $("#loandetails").show();
-      });
+      $("#myForm").submit(function(e){
+        e.preventDefault();
+          alert("Submitted");
+          $('#loandetails').show();
+        });
     </script>
 
   </div>

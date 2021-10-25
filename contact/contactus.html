@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Contact Us</title>
+    <style>
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 36.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        a.nav-link {
+            color: white;
+        }
+
+        a.navbar-brand {
+            color: rgb(179, 201, 202);
+        }
+
+        .bg-img {
+            background-image: url("../images/contact2.jpg");
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
+        }
+
+        h2 {
+            color: goldenrod;
+        }
+
+        .details {
+            border-radius: 5px;
+            border: 1px solid;
+            background: black;
+            opacity: 0.7;
+        }
+
+        li.add {
+            list-style-type: none;
+            color: yellowgreen;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="../index.html">Finance App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Loans</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="../contact/contactus.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <!-- <div>
+            <img src="assets/images/contact.jpg" height="350" width="100%" alt="">
+        </div> -->
+        <div class="bg-img mb-2">
+            <div class="row">
+                <div class="col-md-7 mt-5">
+                    <div class="details pl-4 py-4 ml-4 mr-1">
+                        <h2>Getting in touch is easy!</h2>
+                        <ul>
+                            <li class="add"><i class="fa fa-phone-square"></i> +91 9392528258</li>
+                            <li class="add"><i class="fa fa-envelope"></i> roshan056@gmail.com </li>
+                            <li class="add"><i class="fa fa-map-marker"></i> 401, VBR Enclave , Hmt Hills, KPHB,
+                                hyderabad - 500049 TS.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 bg-light shadow my-5 px-4 py-3">
+                    <h3 class="text-center" style="color: yellowgreen;">
+                        Contact Us
+                    </h3>
+                    <form action="">
+                        <div form-group">
+                            <div>
+                                <label for="name">Name</label>
+                                <input class="form-control" type="text" name="name" id="name" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email">email</label>
+                                <input class="form-control" type="email" name="email" id="email"
+                                    placeholder="Valid Email">
+                            </div>
+                            <div>
+                                <label for="phone">phone</label>
+                                <input class="form-control" type="tel" name="phone" id="phone"
+                                    placeholder="10 digit phone number">
+                            </div>
+                            <div>
+                                <label for="pincode">Area Pincode</label>
+                                <input class="form-control" type="number" name="pincode" id="pincode"
+                                    placeholder="Postal Code">
+                            </div>
+                            <div>
+                                <label for="add">Address</label>
+                                <input class="form-control" type="textarea" name="add" id="add"
+                                    placeholder="street, colony, city.">
+                            </div>
+                            <div class="text-right mt-3">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                            <div class="text-center mt-3 d-none">
+                                <small>We will get back to you soon Thankyou!</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Google map-->
+        <div id="map-container" class="z-depth-1-half map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.115575112315!2d78.39597301410826!3d17.501995488010042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91efa923b9dd%3A0xc94c614167b58eeb!2sMindsoft%20IT%20Solutions!5e0!3m2!1sen!2sin!4v1633331827926!5m2!1sen!2sin"
+                width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!--Google Maps-->
+    </div>
+    <!-- Footer -->
+    <div>
+        <footer class="page-footer bg-dark font-small indigo">
+            <div class="container-fluid">
+                <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+                    <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a class="text-white" href="aboutus.html">About us</a>
+                        </h6>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a class="text-white" href="#!">Privacy Policy</a>
+                        </h6>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a class="text-white" href="contactus.html">Contact</a>
+                        </h6>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a class="text-white" href="login.html">Login</a>
+                        </h6>
+                    </div>
+                </div>
+
+                <hr class="rgba-white-light" style="margin: 0 15%;">
+
+
+                <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+                    <div class="col-md-8 col-12 mt-3">
+                        <p class="text-light" style="line-height: 1.7rem">Sed ut perspiciatis unde omnis iste natus
+                            error sit voluptatem
+                            accusantium doloremque laudantium, totam rem
+                            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                            sunt
+                            explicabo.
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                            consequuntur.</p>
+                    </div>
+
+                </div>
+
+                <hr class="clearfix d-md-none " style="margin: 10% 15% 5%;">
+                <div class="row pb-3">
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center p-4">
+                <span style="color: blanchedalmond;">© 2021 Copyright</span>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+</body>
